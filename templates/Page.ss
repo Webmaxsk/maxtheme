@@ -7,19 +7,19 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     
     <% require css("http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700|Droid+Sans:700") %>
-    <% require css(yaml/yaml/core/base.min.css) %>
-    <% require themedCSS(navigation-hlist) %>
-    <% require themedCSS(forms-gray-theme) %>
-    <% require themedCSS(forms-searchform) %>
+    <% require themedCSS(yaml-base.min) %>
+    <% require themedCSS(yaml-navigation-hlist) %>
+    <% require themedCSS(yaml-forms-gray-theme) %>
+    <% require themedCSS(yaml-forms-searchform) %>
 	<% require themedCSS(typography) %>
-	<% require themedCSS(screen-FULLPAGE-layout) %>
-	<% require themedCSS(print) %>
+	<% require themedCSS(yaml-screen-FULLPAGE-layout) %>
+	<% require themedCSS(yaml-print) %>
 
 	<!-- Mobile viewport optimisation -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!--[if lte IE 7]>
-	<link href="/yaml/yaml/core/iehacks.css" rel="stylesheet" type="text/css" />
+	<link href="$themedir/css/yaml-iehacks.min.css" rel="stylesheet" type="text/css" />
 	<![endif]-->
 
 	<!--[if lt IE 9]>
