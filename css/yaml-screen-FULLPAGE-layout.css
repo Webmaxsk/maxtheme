@@ -1,0 +1,282 @@
+/**
+ * "Yet Another Multicolumn Layout" - YAML CSS Framework
+ *
+ * default screen stylesheet - FULLPAGE-layout type layout
+ *
+ * @copyright       Copyright 2005-2012, Dirk Jesse
+ * @license         CC-BY 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-CDL (http://www.yaml.de/license.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         4.0
+ * @revision        $Revision: 703 $
+ * @lastmodified    $Date: 2012-02-05 11:33:35 +0100 (So, 05 Feb 2012) $
+ */
+
+@media screen {
+
+	/* force vertical scrollbar */
+	body {
+		overflow-y: scroll;
+	}
+
+	/* Layout Module Configuration */
+	.ym-wrapper {
+		max-width: 80em;
+		margin: 0 auto;
+	}
+
+	.ym-wbox {
+		padding: 1em 1.5em;
+	}
+
+	/* fallback for media queries */
+	body > header,
+	body > nav,
+	body > #main,
+	body > footer {
+		min-width: 760px;
+	}
+
+	/* Basic Element Styling */
+	header {
+		background: #444;
+		color: #ccc;
+	}
+
+	header  {
+		background: #073775 url("/themes/maxtheme/images/bg-2-blue.png") repeat-x 0 0 ;
+		color: #fff;
+		min-height: 100px
+	}
+	
+	header #logo {display: inline; float: left}
+	
+	.social-buttons ul {
+		margin:0;
+		padding: 0;
+		/* (en|de) Bugfix:IE - Doubled Float Margin Bug */
+		display:inline;
+		float:left; /* LTR */
+	}
+	
+	.social-buttons ul li {
+		/* (en|de) Bugfix:IE - Doubled Float Margin Bug */
+		display:inline;
+		float:left; /* LTR */
+		font-size:1.0em;
+		line-height:1em;
+		list-style-type:none;
+		margin: 0 .75em 0 0;
+		padding:0;
+	}
+	
+	.social-buttons ul li a,
+	.social-buttons ul li strong {
+		background:transparent;
+		color:#aaa;
+		display:block;
+		font-size:1em;
+		line-height: 2em;
+		padding: 0;
+		font-weight:normal;
+		text-decoration:none;
+		width:auto;
+	}
+
+	.social-buttons ul li a:focus,
+	.social-buttons ul li a:hover,
+	.social-buttons ul li a:active  {
+		text-decoration:none;
+		outline: 0 none;
+	}
+
+	.social-buttons ul li.active {
+		background:#666;
+		background: rgba(255,255,255,.3);
+		-webkit-border-radius: 0.2em;
+		-moz-border-radius: 0.2em;
+		border-radius: 0.2em;
+		color: #fff;
+	}
+
+	.ym-hlist ul li.active strong,
+	.ym-hlist ul li.active a:focus,
+	.ym-hlist ul li.active a:hover,
+	.ym-hlist ul li.active a:active {
+		background:transparent;
+		color:#fff;
+		text-decoration:none;
+	}
+	
+	.ym-searchform {
+		float:right;
+		display: inline
+	}
+
+	nav {
+		background: #2b2b2b url("/themes/maxtheme/images/bg-1.png") repeat 0 0;
+		min-height: 50px
+	}
+
+	#main .info {
+		margin-bottom: 1.5em;
+	}
+
+	footer {
+		background: #eee;
+		color: #444;
+	}
+
+	footer p {
+		margin: 0;
+	}
+
+	header .ym-wbox {
+		padding: 2.75em 1.5em 1em 1.5em;
+	}
+
+	.ym-gbox { padding: 0 1.5em; }
+	.ym-gbox-left { padding: 0 1.5em 0 0; }
+	.ym-gbox-right { padding: 0 0 0 1.5em; }
+
+	section.box { padding: 0 1.5em 1.5em 1.5em; }
+
+	#main aside .ym-gbox-right {
+		border-left: 1px #ddd solid;
+	}
+
+	/* Column-Set Configuration: 3-1 (sidebar left) */
+	/* content */
+	.cols-3-1 .ym-col1 {
+		width: 75%;
+		float: right
+	}
+	/* sidebar */
+	.cols-3-1 .ym-col3 {
+		margin-left:0;
+		margin-right:75%
+	}
+	
+	/* Column-Set Configuration: 1-3 (sidebar right) */
+	/* content */
+	.cols-1-3 .ym-col1 {
+		width: 75%
+	}
+	/* sidebar */
+	.cols-1-3 .ym-col3 {
+		margin-left: 75%;
+		margin-right:0
+	}
+
+	.cols-1-3 .ym-col1 .ym-cbox { padding: 0 0.75em 0 1.5em; }
+	.cols-1-3 .ym-col3 .ym-cbox { padding: 0 1.5em 0 0.75em; }
+
+	.cols-1-3 .ym-gbox { padding: 0 1.5em 0 0; }
+
+	/* skip links styling */
+	.ym-skiplinks a.ym-skip:focus,
+	.ym-skiplinks a.ym-skip:active {
+		color:#fff;
+		background:#333;
+		border-bottom:1px #000 solid;
+		padding:10px 0;
+		text-align: center;
+		text-decoration:none;
+	}
+}
+
+/* reset fallback values in modern browsers */
+@media screen and ( min-width: 0px ) {
+
+	body > header,
+	body > nav,
+	body > #main,
+	body > footer {
+		min-width: 0;
+	}
+}
+
+@media screen and ( max-width: 760px ) {
+
+	.secondary {
+		border-top: 1px #888 solid;
+		margin-top: 1.5em !important;
+	}
+
+	#main aside .ym-gbox-right {
+		border: 0 none;
+	}
+
+	/* Linearisation for Grid- and Column-Module, based on CSS class .linearize-level-1 */
+	.linearize-level-1,
+	.linearize-level-1 > [class*="ym-g"],
+	.linearize-level-1 > [class*="ym-col"] {
+		display: block;
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+		width: 100% !important;
+	}
+
+	.linearize-level-1 > [class*="ym-g"] > [class*="ym-gbox"],
+	.linearize-level-1 > [class*="ym-col"] > [class*="ym-cbox"] {
+		overflow: hidden; /* optional for containing floats */
+		padding: 0;
+	}
+
+	.ym-searchform {
+		display:block;
+		float: none;
+		width: auto;
+		text-align: right;
+	}
+
+	.ym-searchform input[type="search"] {
+		width: 14%;
+	}
+}
+
+@media screen and ( max-width: 480px) {
+
+	header .ym-wbox {
+		padding: 0.75em 10px;
+	}
+
+	footer .ym-wbox,
+	.ym-wbox,
+	nav .ym-hlist ul {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	/* Linearisation for Grid- and Column-Module, based on CSS class .linearize-level-2 */
+	.linearize-level-2,
+	.linearize-level-2 > [class*="ym-g"],
+	.linearize-level-2 > [class*="ym-col"] {
+		display: block;
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+		width: 100% !important;
+	}
+
+	.linearize-level-2 > [class*="ym-g"] > [class*="ym-gbox"],
+	.linearize-level-2 > [class*="ym-col"] > [class*="ym-cbox"] {
+		overflow: hidden; /* optional for containing floats */
+		padding: 0;
+	}
+
+	.ym-searchform,
+	nav .ym-hlist ul,
+	nav .ym-hlist li {
+		display:block;
+		float: none;
+		width: auto;
+		text-align: left;
+	}
+
+	.ym-searchform input[type="search"] {
+		width: 75%;
+	}
+}
