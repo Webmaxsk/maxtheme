@@ -1,0 +1,1 @@
+put theme in themes folder (theme name should be "maxtheme"), activate this theme in mysite/_config.php or in backend's SiteConfig area.
